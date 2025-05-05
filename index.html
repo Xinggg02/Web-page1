@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,11 +40,17 @@
             color: black;
         }
 
-        /* 調小 pannellum 容器 */
         #panoram {
             width: 600px;
             height: 350px;
             margin: 0 auto;
+            border: 2px solid #333;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 5px 10px;
+            margin: 10px auto;
         }
     </style>
 </head>
@@ -113,6 +119,27 @@
             <tr> 
                 <td colspan="2">
                     <p>台中市市定古蹟張家祖廟360影像</p>
+                    
+                    <!-- 下拉選單 -->
+                    <select id="imageSelector">
+                        <option value="入口.jpg">入口</option>
+                        <option value="內入口步道.jpg">內入口步道</option>
+                        <option value="內埕.jpg">內埕</option>
+                        <option value="內埕2.jpg">內埕2</option>
+                        <option value="內埕3.jpg">內埕3</option>
+                        <option value="右護龍.jpg">右護龍</option>
+                        <option value="右護龍內1.jpg">右護龍內1</option>
+                        <option value="右護龍內2.jpg">右護龍內2</option>
+                        <option value="右護龍內3.jpg">右護龍內3</option>
+                        <option value="外步道1.jpg">外步道1</option>
+                        <option value="外步道2.jpg">外步道2</option>
+                        <option value="外步道3.jpg">外步道3</option>
+                        <option value="外埕.jpg">外埕</option>
+                        <option value="外埕2.jpg">外埕2</option>
+                        <option value="左護龍.jpg">左護龍</option>
+                        <option value="後院.jpg">後院</option>
+                    </select>
+
                     <div id="panoram"></div>
                 </td>
             </tr>
@@ -132,9 +159,17 @@
     </div>
 
     <script>
-        pannellum.viewer('panoram', {
-            "type": "equirectangular",
-            "panorama": "01.jpg"
+        const viewer = pannellum.viewer('panoram', {
+            type: 'equirectangular',
+            panorama: '入口.jpg'
+        });
+
+        document.getElementById('imageSelector').addEventListener('change', function() {
+            const selectedImage = this.value;
+            viewer.loadScene('default', {
+                type: 'equirectangular',
+                panorama: selectedImage
+            });
         });
     </script>
 </body>
