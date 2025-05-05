@@ -2,128 +2,74 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>臺中市景點推薦網</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <title>台中市定古蹟張家祖廟360影像</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
-        #container { margin: 0 auto; width: 1024px; }
-        td { text-align: center; padding:10px; }
-        .r_img { border-radius: 50%; width: 300px; height: 300px; }
-        .l_font { font-size: 50px; }
-        .l_font1 { font-size: 30px; }
-        .l_font1:hover { background-color: black; color: white; }
-        body { margin: 0; }
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-        .navbar a:hover {
-            background: #ddd;
-            color: black;
-        }
-        #panoram {
-            width: 600px;
-            height: 350px;
+        body { text-align: center; font-family: Arial; }
+        #panorama {
+            width: 800px;
+            height: 450px;
             margin: 0 auto;
+            border: 2px solid #333;
+        }
+        select {
+            font-size: 16px;
+            margin: 10px;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#container">回首頁</a>
-        <a href="#s1">台中國家歌劇院</a>
-        <a href="#s2">臺中州廳</a>
-        <a href="#s3">審計新村</a>
-    </div>
+    <h2>台中市定古蹟張家祖廟360影像</h2>
+    <select id="imageSelect">
+        <option value="入口.jpg">入口</option>
+        <option value="內入口步道.jpg">內入口步道</option>
+        <option value="內垣.jpg">內垣</option>
+        <option value="內垣2.jpg">內垣2</option>
+        <option value="內垣3.jpg">內垣3</option>
+        <option value="右護龍.jpg">右護龍</option>
+        <option value="右護龍內1.jpg">右護龍內1</option>
+        <option value="右護龍內2.jpg">右護龍內2</option>
+        <option value="右護龍內3.jpg">右護龍內3</option>
+        <option value="左護龍.jpg">左護龍</option>
+        <option value="外垣.jpg">外垣</option>
+        <option value="外垣2.jpg">外垣2</option>
+        <option value="外步道1.jpg">外步道1</option>
+        <option value="外步道2.jpg">外步道2</option>
+        <option value="外步道3.jpg">外步道3</option>
+        <option value="後院.jpg">後院</option>
+    </select>
 
-    <div id="container">
-        <table>
-            <tr>
-                <td colspan="2">
-                    <p><br><font class="l_font">台中景點推薦</font></p>
-                    <p><iframe frameborder="0" src="slideshow.html" width="1024" height="350"></iframe></p>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="2">
-                    <p class="l_font1">臺中市</p>
-                    <p>臺中市，通稱臺中，簡稱「中」，為中華民國直轄市，中臺灣唯一的直轄市。</p>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <img id="s1" src="01.jpeg" class="r_img">
-                </td>
-                <td>
-                    <font class="l_font1">台中國家歌劇院</font>
-                    <p>台中國家歌劇院位於台中市西屯區，是極具特色的大型公有展演空間，由日本建築師伊東豊雄設計。</p>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="2">
-                    <p>台中市市定古蹟張家祖廟360影像</p>
-                    <select id="imageSelector">
-                        <option value="入口.jpg">入口</option>
-                        <option value="內入口步道.jpg">內入口步道</option>
-                        <option value="內埕.jpg">內埕</option>
-                        <option value="內埕2.jpg">內埕2</option>
-                        <option value="內埕3.jpg">內埕3</option>
-                        <option value="右護龍.jpg">右護龍</option>
-                        <option value="右護龍內1.jpg">右護龍內1</option>
-                        <option value="右護龍內2.jpg">右護龍內2</option>
-                        <option value="右護龍內3.jpg">右護龍內3</option>
-                        <option value="外步道1.jpg">外步道1</option>
-                        <option value="外步道2.jpg">外步道2</option>
-                        <option value="外步道3.jpg">外步道3</option>
-                        <option value="外埕.jpg">外埕</option>
-                        <option value="外埕2.jpg">外埕2</option>
-                        <option value="左護龍.jpg">左護龍</option>
-                        <option value="後院.jpg">後院</option>
-                    </select>
-                    <div id="panoram"></div>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="2">
-                    <iframe frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1VHHwYYoRjxJld8dXt1drdjSiiFOpFjs&ehbc=2E312F" width="900" height="600"></iframe>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="2" style="background-color: black; color: white;">
-                    <p>網頁製作:鄭凱心</p>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <div id="panorama"></div>
 
     <script>
-        const viewer = pannellum.viewer('panoram', {
-            "type": "equirectangular",
-            "panorama": "入口.jpg"
+        let viewer;
+
+        function loadPanorama(image) {
+            try {
+                if (viewer) viewer.destroy();
+                viewer = pannellum.viewer('panorama', {
+                    type: 'equirectangular',
+                    panorama: image,
+                    autoLoad: true,
+                    showControls: true
+                });
+            } catch (e) {
+                alert("無法載入圖片：" + image + "。請確認檔案是否存在且為全景格式。");
+            }
+        }
+
+        document.getElementById('imageSelect').addEventListener('change', function() {
+            const selectedImage = this.value;
+            loadPanorama(selectedImage);
         });
 
-        document.getElementById('imageSelector').addEventListener('change', function() {
-            const selectedImage = this.value;
-            viewer.loadPanorama(selectedImage);
-        });
+        // 預設載入第一張
+        window.onload = function() {
+            const firstImage = document.getElementById('imageSelect').value;
+            loadPanorama(firstImage);
+        };
     </script>
 </body>
 </html>
