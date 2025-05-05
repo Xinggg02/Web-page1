@@ -7,15 +7,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
-        #panoram {
-            width: 1024px;
-            height: 800px;
-        }
-        #panoram2 {
-            width: 1024px;
-            height: 800px;
-        }
-
         #container { margin: 0 auto; width: 1024px; }
         td { text-align: center; padding:10px; }
         .r_img { border-radius: 50%; width: 300px; height: 300px; }
@@ -49,13 +40,7 @@
             color: black;
         }
 
-        .main {
-            padding: 16px;
-            margin-top: 30px;
-            height: 1500px;
-        }
-
-        #panorama {
+        #panorama, #panoram {
             width: 900px;
             height: 500px;
             margin: 0 auto;
@@ -80,6 +65,12 @@
                     <p>
                         <iframe frameborder="0" src="slideshow.html" width="1024" height="350"></iframe>
                     </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <div id="panorama"></div>
                 </td>
             </tr>
 
@@ -124,13 +115,10 @@
                 </td>
             </tr>
 
-            <!-- 新增在地圖前 -->
             <tr> 
                 <td colspan="2">
-                    <p class="l_font1">台中市市定古蹟張家祖廟 360 影像</p>
+                    <p>台中市市定古蹟張家祖廟360影像</p>
                     <div id="panoram"></div>
-                    <br>
-                    <div id="panoram2"></div>
                 </td>
             </tr>
 
@@ -149,14 +137,14 @@
     </div>
 
     <script>
-        pannellum.viewer('panoram', {
+        pannellum.viewer('panorama', {
             "type": "equirectangular",
-            "panorama": "內埕.jpg"
+            "panorama": "入口.jpg"
         });
 
-        pannellum.viewer('panoram2', {
+        pannellum.viewer('panoram', {
             "type": "equirectangular",
-            "panorama": "內埕2.jpg"
+            "panorama": "張家祖廟.jpg"
         });
     </script>
 </body>
