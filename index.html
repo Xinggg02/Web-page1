@@ -119,7 +119,10 @@
             "type": "equirectangular",
             "panorama": "入口.jpg"
         });
-
+        const viewer = pannellum.viewer('panoram', {
+            "type": "equirectangular",
+            "panorama": "內埕.jpg"
+        });
         document.getElementById('imageSelector').addEventListener('change', function() {
             const selectedImage = this.value;
             viewer.loadPanorama(selectedImage);
