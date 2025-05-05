@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
-        #panoram{
-                width: 1024px;
-                height: 800px;
+        #panoram {
+            width: 1024px;
+            height: 800px;
         }
-        #panoram2{
-                width: 1024px;
-                height: 800px;
+        #panoram2 {
+            width: 1024px;
+            height: 800px;
         }
 
         #container { margin: 0 auto; width: 1024px; }
@@ -55,7 +55,6 @@
             height: 1500px;
         }
 
-        /* 新增 pannellum 容器大小 */
         #panorama {
             width: 900px;
             height: 500px;
@@ -81,13 +80,6 @@
                     <p>
                         <iframe frameborder="0" src="slideshow.html" width="1024" height="350"></iframe>
                     </p>
-                </td>
-            </tr>
-
-            <!-- 新增 pannellum 360 全景圖 -->
-            <tr>
-                <td colspan="2">
-                    <div id="panorama"></div>
                 </td>
             </tr>
 
@@ -132,12 +124,13 @@
                 </td>
             </tr>
 
+            <!-- 新增在地圖前 -->
             <tr> 
                 <td colspan="2">
-                    台中市市定古蹟張家祖廟360影像
-                    <div id="panoram"></dive>
+                    <p class="l_font1">台中市市定古蹟張家祖廟 360 影像</p>
+                    <div id="panoram"></div>
                     <br>
-                    <div id="panoram2"></dive>
+                    <div id="panoram2"></div>
                 </td>
             </tr>
 
@@ -156,9 +149,14 @@
     </div>
 
     <script>
-        pannellum.viewer('panorama', {
+        pannellum.viewer('panoram', {
             "type": "equirectangular",
-            "panorama": "入口.jpg"
+            "panorama": "內埕.jpg"
+        });
+
+        pannellum.viewer('panoram2', {
+            "type": "equirectangular",
+            "panorama": "內埕2.jpg"
         });
     </script>
 </body>
