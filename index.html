@@ -40,9 +40,10 @@
             color: black;
         }
 
-        #panorama, #panoram {
-            width: 900px;
-            height: 500px;
+        /* 調小 pannellum 容器 */
+        #panoram {
+            width: 600px;
+            height: 350px;
             margin: 0 auto;
         }
     </style>
@@ -65,12 +66,6 @@
                     <p>
                         <iframe frameborder="0" src="slideshow.html" width="1024" height="350"></iframe>
                     </p>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="2">
-                    <div id="panorama"></div>
                 </td>
             </tr>
 
@@ -137,11 +132,6 @@
     </div>
 
     <script>
-        pannellum.viewer('panorama', {
-            "type": "equirectangular",
-            "panorama": "入口.jpg"
-        });
-
         pannellum.viewer('panoram', {
             "type": "equirectangular",
             "panorama": "張家祖廟.jpg"
