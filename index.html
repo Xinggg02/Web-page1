@@ -6,14 +6,46 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
-        #container { margin: 0 auto; width: 1024px; padding-top: 60px; }
-        td { text-align: center; padding:10px; vertical-align: top; }
-        .r_img { border-radius: 50%; width: 300px; height: 300px; }
-        .l_font { font-size: 50px; }
-        .l_font1 { font-size: 30px; }
-        .l_font1:hover { background-color: black; color: white; }
-        .r_img:hover { rotate: -10deg; opacity: 50%; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            margin: 0 auto;
+            width: 1024px;
+            padding-top: 60px;
+        }
+
+        td {
+            text-align: center;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        .r_img {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+        }
+
+        .l_font {
+            font-size: 50px;
+        }
+
+        .l_font1 {
+            font-size: 30px;
+        }
+
+        .l_font1:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .r_img:hover {
+            rotate: -10deg;
+            opacity: 50%;
+        }
 
         .navbar {
             overflow: hidden;
@@ -39,7 +71,7 @@
             color: black;
         }
 
-        #panoram {
+        #panorama {
             width: 600px;
             height: 350px;
             margin: 0 auto;
@@ -59,12 +91,12 @@
         <h1 class="l_font">台中市景點推薦網</h1>
 
         <h2>🔁 360 度環景影像</h2>
-        <div id="panoram"></div>
-
+        <!-- 只保留一張固定的 360 度影像 -->
+        <div id="panorama"></div>
         <script>
-            pannellum.viewer('panoram', {
+            pannellum.viewer('panorama', {
                 type: 'equirectangular',
-                panorama: '入口.jpg',  // <-- 這裡改成你要展示的圖片
+                panorama: '入口.jpg', // 這裡你可以換成其他圖片檔名
                 autoLoad: true
             });
         </script>
