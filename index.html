@@ -2,50 +2,19 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>台中市景點推薦網</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臺中市景點推薦網</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        #container {
-            margin: 0 auto;
-            width: 1024px;
-            padding-top: 60px;
-        }
-
-        td {
-            text-align: center;
-            padding: 10px;
-            vertical-align: top;
-        }
-
-        .r_img {
-            border-radius: 50%;
-            width: 300px;
-            height: 300px;
-        }
-
-        .l_font {
-            font-size: 50px;
-        }
-
-        .l_font1 {
-            font-size: 30px;
-        }
-
-        .l_font1:hover {
-            background-color: black;
-            color: white;
-        }
-
-        .r_img:hover {
-            rotate: -10deg;
-            opacity: 50%;
-        }
+        #container { margin: 0 auto; width: 1024px; }
+        td { text-align: center; padding:10px; vertical-align: top; }
+        .r_img { border-radius: 50%; width: 300px; height: 300px; }
+        .l_font { font-size: 50px; }
+        .l_font1 { font-size: 30px; }
+        .l_font1:hover { background-color: black; color: white; }
+        .r_img:hover { rotate: -10deg; opacity: 50%; }
+        body { margin: 0; font-family: Arial, sans-serif; }
 
         .navbar {
             overflow: hidden;
@@ -71,11 +40,21 @@
             color: black;
         }
 
-        #panorama {
+        #panoram {
             width: 600px;
             height: 350px;
             margin: 0 auto;
             border: 2px solid #333;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 5px 10px;
+            margin: 10px auto;
+        }
+
+        iframe {
+            max-width: 100%;
         }
     </style>
 </head>
@@ -87,30 +66,108 @@
         <a href="#s3">審計新村</a>
     </div>
 
-    <div id="container">
-        <h1 class="l_font">台中市景點推薦網</h1>
+    <div id="container" style="padding-top: 60px;">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <p class="l_font">台中景點推薦</p>
+                    <p>
+                        <iframe frameborder="0" src="slideshow.html" width="1024" height="350"></iframe>
+                    </p>
+                </td>
+            </tr>
 
-        <h2>🔁 360 度環景影像</h2>
-        <!-- 只保留一張固定的 360 度影像 -->
-        <div id="panorama"></div>
-        <script>
-            pannellum.viewer('panorama', {
-                type: 'equirectangular',
-                panorama: '入口.jpg', // 這裡你可以換成其他圖片檔名
-                autoLoad: true
-            });
-        </script>
+            <tr>
+                <td colspan="2">
+                    <p class="l_font1">臺中市</p>
+                    <p>臺中市，通稱臺中，簡稱「中」，為中華民國直轄市，臺灣六都之一，也是中臺灣唯一的直轄市。周邊與臺灣省的六個縣相鄰，北鄰苗栗縣、新竹縣，南鄰彰化縣、南投縣，東隔中央山脈與花蓮縣相鄰，東北以中央山脈和雪山山脈毗鄰宜蘭縣，西臨臺灣海峽。</p>
+                </td>
+            </tr>
 
-        <hr>
+            <tr>
+                <td>
+                    <img id="s1" src="01.jpeg" class="r_img">
+                </td>
+                <td>
+                    <p class="l_font1">台中國家歌劇院</p>
+                    <p>台中國家歌劇院位於台中市西屯區，是極具特色的大型公有展演空間，由日本建築師伊東豊雄設計，以人類最原始的「洞窟」、「地穴」的概念設計成世界獨一無二的美聲涵洞曲牆建築。</p>
+                    <p>所在位置：台中市西屯區惠來路二段101號</p>
+                </td>
+            </tr>
 
-        <h2 id="s1">台中國家歌劇院</h2>
-        <p>台中國家歌劇院位於台中市西屯區，是由著名建築師伊東豊雄設計的地標建築。內部流線空間與聲學設計極佳，是文化與建築美學的結合。</p>
+            <tr>
+                <td>
+                    <p class="l_font1" id="s2">臺中州廳</p>
+                    <p>臺中州廳位於台中市西區，為國定古蹟，原為日治時期臺中州廳，二戰後由台中市政府遷入辦公，附近有台中文學公園、台中刑務所演武場等景點。</p>
+                    <p>所在位置：台中市西區民權路99號</p>
+                </td>
+                <td>
+                    <img src="02.jpeg" class="r_img">
+                </td>
+            </tr>
 
-        <h2 id="s2">臺中州廳</h2>
-        <p>臺中州廳為日治時期建築，見證了歷史與現代的交錯。現今作為文化場館開放參觀。</p>
+            <tr>
+                <td>
+                    <img id="s3" src="03.jpeg" class="r_img">
+                </td>
+                <td>
+                    <p class="l_font1">審計新村</p>
+                    <p>審計新村位於台中市西區，原為臺灣省政府審計處員工宿舍，近年配合創業基地與文創園區計畫，重新活化為青年創業聚落。</p>
+                    <p>所在位置：台中市西區民生路368巷</p>
+                </td>
+            </tr>
 
-        <h2 id="s3">審計新村</h2>
-        <p>審計新村是由老舊宿舍改造而成的文創聚落，擁有許多咖啡廳、手作小店，適合散步、拍照與體驗台中的文青氛圍。</p>
+            <tr>
+                <td colspan="2">
+                    <p class="l_font1">台中市市定古蹟張家祖廟360影像</p>
+                    <select id="imageSelector">
+                        <option value="入口.jpg">入口</option>
+                        <option value="內入口步道.jpg">內入口步道</option>
+                        <option value="內埕.jpg">內埕</option>
+                        <option value="內埕2.jpg">內埕2</option>
+                        <option value="內埕3.jpg">內埕3</option>
+                        <option value="右護龍.jpg">右護龍</option>
+                        <option value="右護龍內1.jpg">右護龍內1</option>
+                        <option value="右護龍內2.jpg">右護龍內2</option>
+                        <option value="右護龍內3.jpg">右護龍內3</option>
+                        <option value="外步道1.jpg">外步道1</option>
+                        <option value="外步道2.jpg">外步道2</option>
+                        <option value="外步道3.jpg">外步道3</option>
+                        <option value="外埕.jpg">外埕</option>
+                        <option value="外埕2.jpg">外埕2</option>
+                        <option value="左護龍.jpg">左護龍</option>
+                        <option value="後院.jpg">後院</option>
+                    </select>
+                    <div id="panoram"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <iframe frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1VHHwYYoRjxJld8dXt1drdjSiiFOpFjs&ehbc=2E312F" width="900" height="600"></iframe>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="background-color: black; color: white;">
+                    <p>網頁製作: 鄭凱心</p>
+                </td>
+            </tr>
+        </table>
     </div>
+
+    <script>
+        const viewer = pannellum.viewer('panoram', {
+            type: 'equirectangular',
+            panorama: '入口.jpg',
+            autoLoad: true,
+            showControls: true
+        });
+
+        document.getElementById('imageSelector').addEventListener('change', function() {
+            const selectedImage = this.value;
+            viewer.loadPanorama(selectedImage);
+        });
+    </script>
 </body>
 </html>
