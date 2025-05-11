@@ -45,13 +45,6 @@
             margin: 0 auto;
             border: 2px solid #333;
         }
-
-        select {
-            font-size: 16px;
-            padding: 5px 10px;
-            margin: 10px auto;
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -65,56 +58,27 @@
     <div id="container">
         <h1 class="l_font">台中市景點推薦網</h1>
 
-        <h2>🔁 360 度景點選擇</h2>
-        <select onchange="changeScene(this)">
-            <option value="入口.jpg">入口</option>
-            <option value="內入口步道.jpg">內入口步道</option>
-            <option value="內埕.jpg">內埕</option>
-            <option value="內埕2.jpg">內埕2</option>
-            <option value="內埕3.jpg">內埕3</option>
-            <option value="右護龍.jpg">右護龍</option>
-            <option value="右護龍內1.jpg">右護龍內1</option>
-            <option value="右護龍內2.jpg">右護龍內2</option>
-            <option value="右護龍內3.jpg">右護龍內3</option>
-            <option value="外埕.jpg">外埕</option>
-            <option value="外埕2.jpg">外埕2</option>
-            <option value="外步道1.jpg">外步道1</option>
-            <option value="外步道2.jpg">外步道2</option>
-            <option value="外步道3.jpg">外步道3</option>
-            <option value="左護龍.jpg">左護龍</option>
-            <option value="後院.jpg">後院</option>
-        </select>
-
+        <h2>🔁 360 度環景影像</h2>
         <div id="panoram"></div>
 
         <script>
-            var viewer = pannellum.viewer('panoram', {
+            pannellum.viewer('panoram', {
                 type: 'equirectangular',
-                panorama: '入口.jpg',
+                panorama: '入口.jpg',  // <-- 這裡改成你要展示的圖片
                 autoLoad: true
             });
-
-            function changeScene(selectObj) {
-                let newScene = selectObj.value;
-                viewer.loadScene('default', {
-                    type: 'equirectangular',
-                    panorama: newScene,
-                    autoLoad: true
-                });
-            }
         </script>
 
         <hr>
 
         <h2 id="s1">台中國家歌劇院</h2>
-        <p>台中國家歌劇院位於台中市西屯區，是極具特色的大型展演空間，由日本建築師伊東豊雄設計，採洞穴式建築結構，被譽為全球最難蓋的建築之一。</p>
+        <p>台中國家歌劇院位於台中市西屯區，是由著名建築師伊東豊雄設計的地標建築。內部流線空間與聲學設計極佳，是文化與建築美學的結合。</p>
 
         <h2 id="s2">臺中州廳</h2>
-        <p>臺中州廳為日治時期所建，為國定古蹟，典雅的巴洛克建築風格，是台中歷史的重要象徵之一。</p>
+        <p>臺中州廳為日治時期建築，見證了歷史與現代的交錯。現今作為文化場館開放參觀。</p>
 
         <h2 id="s3">審計新村</h2>
-        <p>由原審計處改建而成，是文創、設計與青年創業的重要基地，有許多特色店鋪與假日市集。</p>
-
+        <p>審計新村是由老舊宿舍改造而成的文創聚落，擁有許多咖啡廳、手作小店，適合散步、拍照與體驗台中的文青氛圍。</p>
     </div>
 </body>
 </html>
